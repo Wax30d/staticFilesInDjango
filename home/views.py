@@ -1,4 +1,5 @@
 from django.shortcuts import render
+import datetime
 
 
 # Create your views here.
@@ -11,3 +12,8 @@ def other(request):
         'k1': 'Welcome to the Second page',
     }
     return render(request, 'others.html', context)
+
+
+def about(request):
+    time = datetime.datetime.now()
+    return render(request, 'about.html', {'time': time})
