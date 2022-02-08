@@ -8,7 +8,10 @@ def home(request):
 
 
 def other(request):
-    return render(request, 'others.html')
+    context = {
+        'k1': "Welcome to the second page"
+    }
+    return render(request, 'others.html', {'context': context})
 
 
 def about(request):
